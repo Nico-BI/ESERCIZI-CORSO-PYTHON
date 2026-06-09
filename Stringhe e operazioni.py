@@ -31,7 +31,13 @@ print(frase.endswith(fine))
 
 #Elimina gli spazi fra le lettere
 
-print("La tua frase senza spazi è: ", frase.replace(" ", ""))  
+print("La tua frase senza spazi è: ", frase.replace(" ", "")) 
+
+
+#Cambio di lettere
+prima = str(input("Inserisci la lettera che vorresti cambiare: "))
+dopo = str(input("Inserisci la lettera che vorresti inserire: "))
+print("La tua frase con lo scambio di lettere è: ", frase.replace(prima,dopo))
 
 
 #Ripetere una porzione di testo
