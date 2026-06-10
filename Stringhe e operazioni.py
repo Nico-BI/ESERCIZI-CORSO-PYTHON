@@ -1,12 +1,23 @@
 #Inserisci una frase e inverti l'ordine delle parole
 frase=str(input("Inserisci una frase: "))
-print("La tua frase al contrario è: ", frase[::-1]) 
+contrario=frase[::-1]
+print(f"La tua frase al contrario è: {contrario}")
 
+#Elimina gli spazi fra le lettere e verifica se palindroma
 
-#Stampa il primo e l'ultimo carattere 
+nospazi=frase.replace(" ", "")
+print(f"La tua frase senza spazi è: {nospazi}")
+palindroma=contrario.replace(" ","")
+if nospazi==palindroma:
+    print("La tua frase è palindroma") 
+else:
+    print("La tua frase non è palindroma")
+
+#Primo, ultimo carattere e lunghezza
 
 print("Il primo carattere della tua frase è: ", frase[0])     
-print("L'ultimo carattere della tua frase è: ", frase[-1])   
+print("L'ultimo carattere della tua frase è: ", frase[-1])
+print(f"La lunghezza della tua frase è di {len(frase)} caratteri")   
 
 
 #Stampa in maiuscolo o minuscolo
@@ -23,19 +34,14 @@ print(f"La lettera '{lettera}' compare {conteggio} volte.")
 
 #Verifica lettera di inizio e fine
 
-inizio=str(input("Con quale lettera inizia la frase: "))
+inizio=str(input("Indovina con quale lettera inizia la tua frase: "))
 print(frase.startswith(inizio))  
-fine=str(input("Con quale lettera finisce la frase: "))
+fine=str(input("Indovina con quale lettera finisce la tua frase: "))
 print(frase.endswith(fine))    
 
 
-#Elimina gli spazi fra le lettere
-
-print("La tua frase senza spazi è: ", frase.replace(" ", "")) 
-
-
 #Cambio di lettere
-prima = str(input("Inserisci la lettera che vorresti cambiare: "))
+prima = str(input("Inserisci la lettera che vorresti sostituire: "))
 dopo = str(input("Inserisci la lettera che vorresti inserire: "))
 print("La tua frase con lo scambio di lettere è: ", frase.replace(prima,dopo))
 
