@@ -1,0 +1,35 @@
+#Compravendita
+
+soldi=float(input("Quanti soldi hai a disposizione?:"))
+prezzo=float(input("Quanto costa l'articolo che vorresti acquistare?:"))
+
+n_articoli= soldi // prezzo
+print(f"Puoi acquistare {int(n_articoli)} articoli")
+resto= soldi % prezzo
+print("Avrai un resto di", round(resto,2))
+
+
+#Inserisci due numeri e esegui le operazioni
+
+a=float(input("Inserisci il primo numero:"))
+b=float(input("Inserisci il secondo numero:"))
+
+print("Somma:",a + b)
+print("Sottrazione:", a - b)
+print("Prodotto:", a * b)
+try:
+    a!=0
+    print("Divisione:", a / b)
+except ZeroDivisionError:
+    print("Divisione: Non si può dividere per 0")
+
+
+#Arrotondamenti
+
+import math
+
+x=float(input("Inserisci il numero da arrotondare:"))
+print("Arrotondamento per difetto:", math.floor(x))
+print("Arrotondamento per eccesso:", math.ceil(x))
+print("La parte intera:", math.trunc(x))
+print("Valore assoluto:", math.fabs(x))
